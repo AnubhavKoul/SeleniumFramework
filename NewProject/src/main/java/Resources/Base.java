@@ -3,10 +3,9 @@ package Resources;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class Base {
 	public WebDriver driver;
@@ -23,7 +22,8 @@ public class Base {
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("Chrome")) {
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "C:\\My Data\\GIT Repo\\Dependency\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 
