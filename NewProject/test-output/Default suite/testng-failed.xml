@@ -6,6 +6,8 @@
       <class name="Framework.NewProject.AppTest">
         <methods>
           <include name="navigateToAnubhavHomePage"/>
+          <include name="tearDown"/>
+          <include name="StartUp"/>
         </methods>
       </class> <!-- Framework.NewProject.AppTest -->
     </classes>
