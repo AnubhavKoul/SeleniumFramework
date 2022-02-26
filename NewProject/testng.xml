@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- To run Paralelly add parallel = "tests/classes/etc. in suite tag after suit name -->
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="Framework.NewProject.AppTest"/>
-    </classes>
-  </test> <!-- Test -->
+	<test thread-count="5" name="AppTest">
+		<classes>
+			<class name="Framework.NewProject.AppTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="AboutPage">
+		<classes>
+			<class name="Framework.NewProject.AboutPageTest" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -3,13 +3,13 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PageName {
+public class HomePage {
 
 	public WebDriver driver;
 
 	/* Constructor will bring the driver reference from the test to PageName class.*/
 
-	public PageName(WebDriver driver) {
+	public HomePage(WebDriver driver) {
 		this.driver = driver;
 	}
 

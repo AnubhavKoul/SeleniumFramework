@@ -61,8 +61,14 @@
 			<version>2.17.1</version>
 		</dependency>
 	</dependencies>
-
 	<build>
+<!-- resource is telling the maven to conside all the files under resources while running the tests -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<pluginManagement>
 			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
 			<plugins>
