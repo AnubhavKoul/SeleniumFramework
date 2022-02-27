@@ -24,6 +24,13 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -62,7 +69,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-<!-- resource is telling the maven to conside all the files under resources while running the tests -->
+		<!-- resource is telling the maven to conside all the files under resources while running the tests -->
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>

@@ -1,17 +1,15 @@
 package Framework.NewProject;
-
 import java.io.IOException;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import Resources.Base;
+import Resources.Setup;
 import pageObjects.AboutPage;
 
-public class AboutPageTest extends Base {
+public class AboutPageTest extends Setup {
 	public WebDriver driver;
 	private static Logger log = LogManager.getLogger(AppTest.class.getName());
 
