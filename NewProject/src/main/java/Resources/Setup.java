@@ -58,12 +58,13 @@ public class Setup {
 		return prop.getProperty("url");
 	}
 	
-	public void getScreenShot(String testCaseName, WebDriver driver) throws IOException
+	public String getScreenShot(String testCaseName, WebDriver driver) throws IOException
 	{
 		TakesScreenshot shot = (TakesScreenshot)driver;
 		File source = shot.getScreenshotAs(OutputType.FILE);
 		String destinationFile = System.getProperty("user.dir")+"\\Reports\\"+testCaseName+".png";
 		FileUtils.copyFile(source,new File(destinationFile));
+		return destinationFile;
 	}
 
 }
