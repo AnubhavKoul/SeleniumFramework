@@ -11,9 +11,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-
 
 public class Setup {
 	public WebDriver driver;
@@ -23,7 +23,7 @@ public class Setup {
 		// Getting the values from properties file.
 
 		FileInputStream fis = new FileInputStream(
-				"C:\\My Data\\Git_Master_Repo\\NewProject\\src\\main\\java\\Resources\\data.properties");
+				System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\data.properties");
 		prop = new Properties();
 		prop.load(fis);
 
@@ -31,20 +31,27 @@ public class Setup {
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("Chrome")) {
-			//WebDriverManager.chromedriver().setup();
-			System.setProperty("webdriver.chrome.driver", "C:\\My Data\\GIT Repo\\Dependency\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\chromedriver.exe");
+			/*
+			 * To Run chrome in headless mode, make the below changes. 
+			 * ChromeOptions options = new ChromeOptions(); 
+			 * options.addArguments("headless"); 
+			 * driver = new ChromeDriver(options);
+			 */
+
 			driver = new ChromeDriver();
 		}
-		
-		else if(browserName.equalsIgnoreCase("IE"))
-		{
-			System.setProperty("webdriver.chrome.driver", "C:\\My Data\\GIT Repo\\Dependency\\IEdriver.exe");
+
+		else if (browserName.equalsIgnoreCase("IE")) {
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\IEdriver.exe");
 			driver = new InternetExplorerDriver();
 		}
-		
-		else if(browserName.equalsIgnoreCase("Edge"))
-		{
-			System.setProperty("webdriver.chrome.driver", "C:\\My Data\\GIT Repo\\Dependency\\Edgedriver.exe");
+
+		else if (browserName.equalsIgnoreCase("Edge")) {
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\Edgedriver.exe");
 			driver = new EdgeDriver();
 		}
 
@@ -52,18 +59,16 @@ public class Setup {
 
 		return driver;
 	}
-	
-	public String getUrl()
-	{
+
+	public String getUrl() {
 		return prop.getProperty("url");
 	}
-	
-	public String getScreenShot(String testCaseName, WebDriver driver) throws IOException
-	{
-		TakesScreenshot shot = (TakesScreenshot)driver;
+
+	public String getScreenShot(String testCaseName, WebDriver driver) throws IOException {
+		TakesScreenshot shot = (TakesScreenshot) driver;
 		File source = shot.getScreenshotAs(OutputType.FILE);
-		String destinationFile = System.getProperty("user.dir")+"\\Reports\\"+testCaseName+".png";
-		FileUtils.copyFile(source,new File(destinationFile));
+		String destinationFile = System.getProperty("user.dir") + "\\Reports\\" + testCaseName + ".png";
+		FileUtils.copyFile(source, new File(destinationFile));
 		return destinationFile;
 	}
 

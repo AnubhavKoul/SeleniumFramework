@@ -12,6 +12,7 @@ import pageObjects.HomePage;
 
 
 public class AppTest extends Setup {
+	
 	public WebDriver driver;
 	private static Logger log = LogManager.getLogger(AppTest.class.getName());
 
