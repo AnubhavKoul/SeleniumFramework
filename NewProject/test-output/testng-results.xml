@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-04T00:58:43 IST" name="Suite" finished-at="2022-03-04T00:59:03 IST" duration-ms="20069">
+  <suite started-at="2022-03-13T01:19:20 IST" name="Suite" finished-at="2022-03-13T01:20:15 IST" duration-ms="54759">
     <groups>
     </groups>
-    <test started-at="2022-03-04T00:58:43 IST" name="AppTest" finished-at="2022-03-04T00:58:50 IST" duration-ms="7720">
+    <test started-at="2022-03-13T01:19:20 IST" name="AppTest" finished-at="2022-03-13T01:20:01 IST" duration-ms="40951">
       <class name="Framework.NewProject.AppTest">
-        <test-method is-config="true" signature="StartUp()[pri:0, instance:Framework.NewProject.AppTest@2c5d601e]" started-at="2022-03-04T00:58:43 IST" name="StartUp" finished-at="2022-03-04T00:58:49 IST" duration-ms="6161" status="PASS">
+        <test-method is-config="true" signature="StartUp()[pri:0, instance:Framework.NewProject.AppTest@672f11c2]" started-at="2022-03-13T01:19:20 IST" name="StartUp" finished-at="2022-03-13T01:19:59 IST" duration-ms="39320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method signature="navigateToAnubhavHomePage()[pri:0, instance:Framework.NewProject.AppTest@2c5d601e]" started-at="2022-03-04T00:58:49 IST" name="navigateToAnubhavHomePage" finished-at="2022-03-04T00:58:49 IST" duration-ms="44" status="FAIL">
+        <test-method signature="navigateToAnubhavHomePage()[pri:0, instance:Framework.NewProject.AppTest@672f11c2]" started-at="2022-03-13T01:19:59 IST" name="navigateToAnubhavHomePage" finished-at="2022-03-13T01:19:59 IST" duration-ms="59" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Title is not Anubhav Koul expected [Anubhav Koul] but found [Anubhav Koul1]]]>
@@ -58,23 +58,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToAnubhavHomePage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Framework.NewProject.AppTest@2c5d601e]" started-at="2022-03-04T00:58:50 IST" name="tearDown" finished-at="2022-03-04T00:58:50 IST" duration-ms="86" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Framework.NewProject.AppTest@672f11c2]" started-at="2022-03-13T01:20:01 IST" name="tearDown" finished-at="2022-03-13T01:20:01 IST" duration-ms="140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Framework.NewProject.AppTest -->
     </test> <!-- AppTest -->
-    <test started-at="2022-03-04T00:58:51 IST" name="AboutPage" finished-at="2022-03-04T00:59:03 IST" duration-ms="11545">
+    <test started-at="2022-03-13T01:20:02 IST" name="AboutPage" finished-at="2022-03-13T01:20:15 IST" duration-ms="13094">
       <class name="Framework.NewProject.AboutPageTest">
-        <test-method is-config="true" signature="StartUp()[pri:0, instance:Framework.NewProject.AboutPageTest@2ad3a1bb]" started-at="2022-03-04T00:58:51 IST" name="StartUp" finished-at="2022-03-04T00:58:55 IST" duration-ms="4219" status="PASS">
+        <test-method is-config="true" signature="StartUp()[pri:0, instance:Framework.NewProject.AboutPageTest@200606de]" started-at="2022-03-13T01:20:02 IST" name="StartUp" finished-at="2022-03-13T01:20:07 IST" duration-ms="5330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartUp -->
-        <test-method signature="navigateToAnubhavHomePage()[pri:0, instance:Framework.NewProject.AboutPageTest@2ad3a1bb]" started-at="2022-03-04T00:58:55 IST" name="navigateToAnubhavHomePage" finished-at="2022-03-04T00:59:03 IST" duration-ms="7245" status="PASS">
+        <test-method signature="navigateToAnubhavHomePage()[pri:0, instance:Framework.NewProject.AboutPageTest@200606de]" started-at="2022-03-13T01:20:07 IST" name="navigateToAnubhavHomePage" finished-at="2022-03-13T01:20:15 IST" duration-ms="7642" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToAnubhavHomePage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Framework.NewProject.AboutPageTest@2ad3a1bb]" started-at="2022-03-04T00:59:03 IST" name="tearDown" finished-at="2022-03-04T00:59:03 IST" duration-ms="78" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Framework.NewProject.AboutPageTest@200606de]" started-at="2022-03-13T01:20:15 IST" name="tearDown" finished-at="2022-03-13T01:20:15 IST" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

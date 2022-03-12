@@ -15,6 +15,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Setup {
 	public WebDriver driver;
 	public Properties prop;
@@ -31,27 +33,39 @@ public class Setup {
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\chromedriver.exe");
 			/*
-			 * To Run chrome in headless mode, make the below changes. 
-			 * ChromeOptions options = new ChromeOptions(); 
-			 * options.addArguments("headless"); 
-			 * driver = new ChromeDriver(options);
+			 * Traditional way of providing the driver path
+			 * System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
+			 * + "\\src\\main\\java\\Resources\\chromedriver.exe");
 			 */
 
+			/*
+			 * To Run chrome in headless mode, make the below changes. ChromeOptions options
+			 * = new ChromeOptions(); options.addArguments("headless"); driver = new
+			 * ChromeDriver(options);
+			 */
+
+			// Using webdriver Manager dependency
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 
 		else if (browserName.equalsIgnoreCase("IE")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\IEdriver.exe");
+			/*
+			 * System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
+			 * + "\\src\\main\\java\\Resources\\IEdriver.exe");
+			 */
+			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 		}
 
 		else if (browserName.equalsIgnoreCase("Edge")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\Edgedriver.exe");
+
+			/*
+			 * System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
+			 * + "\\src\\main\\java\\Resources\\Edgedriver.exe");
+			 */
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 
@@ -61,7 +75,9 @@ public class Setup {
 	}
 
 	public String getUrl() {
+		
 		return prop.getProperty("url");
+		
 	}
 
 	public String getScreenShot(String testCaseName, WebDriver driver) throws IOException {

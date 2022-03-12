@@ -12,6 +12,7 @@ public class ExtentReporter {
 		It is responsible for basic configurations of the report. */
 		String path = System.getProperty("user.dir")+"\\Reports\\index.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+		
 		//Extent Report class object will be responsible for all configurations.
 		reporter.config().setReportName("Automation Run Report");
 		reporter.config().setDocumentTitle("Anubhav Framework Extent Report");
